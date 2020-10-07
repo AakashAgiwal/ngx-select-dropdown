@@ -6,11 +6,11 @@
     </button>
     <div class="ngx-dropdown-list-container" *ngIf="toggleDropdown" [style.maxHeight]="config.height">
         <div class="search-container" *ngIf="config.search">
-            <input (change)="changeSearchText($event)" [style.direction]="config.inputDirection" name="search-text"
+            <input (change)="changeSearchText($event)"  placeholder=" Search" [style.direction]="config.inputDirection" name="search-text"
                 (input)="searchTextChanged()" [(ngModel)]="searchText" tabindex="-1" autocomplete="off" />
             <i class="fa fa-search" aria-hidden="true"></i>
-            <label [ngClass]="{'active': searchText}">
-                <span class="nsdicon-search"></span> {{config.searchPlaceholder}}</label>
+            <!-- <label [ngClass]="{'active': searchText}">
+                <span class="nsdicon-search"></span> {{config.searchPlaceholder}}</label> -->
         </div>
         <!-- <ul class="selected-items">
             <li tabindex="-1" *ngFor="let selected of selectedItems;let i = index" (click)="deselectItem(selected,i)">
