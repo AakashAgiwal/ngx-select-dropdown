@@ -11,13 +11,13 @@
             <label [ngClass]="{'active': searchText}">
                 <span class="nsdicon-search"></span> {{config.searchPlaceholder}}</label>
         </div>
-        <ul class="selected-items">
+        <!-- <ul class="selected-items">
             <li tabindex="-1" *ngFor="let selected of selectedItems;let i = index" (click)="deselectItem(selected,i)">
                 <span class="nsdicon-close">x</span>
                 <span> {{selected[config.displayKey] || selected}}</span>
             </li>
         </ul>
-        <hr *ngIf="selectedItems.length > 0 && availableItems.length > 0" />
+        <hr *ngIf="selectedItems.length > 0 && availableItems.length > 0" /> -->
         <ul class="available-items">
             <li #availableOption
                 *ngFor="let item of availableItems| filterBy: searchText : config.searchOnKey | limitTo : config.limitTo;let i = index"
